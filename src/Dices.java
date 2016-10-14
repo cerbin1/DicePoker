@@ -5,7 +5,7 @@ class Dices {
 
     void randomDices() {
         for (int i = 0; i < 5; i++) {
-            playersDices[i] = (int) Math.floor(Math.random() * 5);
+            playersDices[i] = (int) (Math.floor(Math.random() * 5) + 1);
         }
     }
 

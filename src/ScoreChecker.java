@@ -34,11 +34,11 @@ class ScoreChecker {
     void checkScore() {
         for (int i = 0; i <= 5; i++) {
             if (groupDiceNumbers[i] == 5) {
-                System.out.println("Poker z " + (i + 1));
+                System.out.println("Poker z " + i);
                 powerOfScore = 8;
                 return;
             } else if (groupDiceNumbers[i] == 4) {
-                System.out.println("Kareta z " + (i + 1));
+                System.out.println("Kareta z " + i);
                 powerOfScore = 7;
                 return;
             } else if (checkIfFull()) {
@@ -54,7 +54,7 @@ class ScoreChecker {
                 powerOfScore = 4;
                 return;
             } else if (groupDiceNumbers[i] == 3) {
-                System.out.println("Trojka z " + (i + 1));
+                System.out.println("Trojka z " + i);
                 powerOfScore = 3;
                 return;
             } else if ((groupDiceNumbers[0] == 2) && (groupDiceNumbers[1] == 2)) { // TODO finish
@@ -62,7 +62,7 @@ class ScoreChecker {
                 powerOfScore = 2;
                 return;
             } else if (groupDiceNumbers[i] == 2) { // TODO finish
-                System.out.println("Dwojka z " + (i + 1));
+                System.out.println("Dwojka z " + i);
                 powerOfScore = 1;
                 return;
             }
