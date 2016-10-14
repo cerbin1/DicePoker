@@ -9,10 +9,6 @@ class ScoreChecker {
         }
     }
 
-    int[] getgroupByDicesNumbers() {
-        return groupDiceNumbers;
-    }
-
     int getPowerOfScore() {
         return powerOfScore;
     }
@@ -58,11 +54,11 @@ class ScoreChecker {
                 powerOfScore = 3;
                 return;
             } else if ((groupDiceNumbers[0] == 2) && (groupDiceNumbers[1] == 2)) { // TODO finish
-                System.out.println("Dwie pary, para 1 i para 2");
+                System.out.println("Dwie pary");
                 powerOfScore = 2;
                 return;
             } else if (groupDiceNumbers[i] == 2) { // TODO finish
-                System.out.println("Dwojka z " + i);
+                System.out.println("Para z " + i);
                 powerOfScore = 1;
                 return;
             }
