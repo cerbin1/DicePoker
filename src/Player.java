@@ -8,7 +8,5 @@ class Player {
         }
     }
 
-    void run() {
 
-    }
 }
