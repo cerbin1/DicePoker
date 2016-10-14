@@ -1,4 +1,4 @@
-class Player {
+class Dices {
 
     private int[] playersDices = new int[5];
 

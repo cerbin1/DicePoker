@@ -2,7 +2,7 @@ class ScoreChecker {
     private int[] groupDiceNumbers = {0, 0, 0, 0, 0, 0};
     private int powerOfScore = 0;
 
-    void groupDicesNumbers(Player player) {
+    void groupDicesNumbers(Dices player) {
         for (int i = 0; i < 5; i++) {
             int[] diceNumbers = player.getDices();
             groupDiceNumbers[diceNumbers[i]]++;
@@ -68,4 +68,5 @@ class ScoreChecker {
             }
         }
     }
+
 }

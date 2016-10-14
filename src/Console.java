@@ -1,5 +1,5 @@
 class Console {
-    static void displayDicesResults(Player p, ScoreChecker s) {
+    static void displayDicesResults(Dices p, ScoreChecker s) {
         for (int i = 0; i < 5; i++) {
             System.out.print(p.getDices()[i] + ", ");
         }
@@ -8,5 +8,12 @@ class Console {
             System.out.print(s.getgroupByDicesNumbers()[i] + ", ");
         }
         System.out.println();
+    }
+
+    static void displayDrawn() {
+        System.out.println("remis");
+    }
+    static void displayPlayerWin() {
+        System.out.println("Pierwszy gracz wygral");
     }
 }
