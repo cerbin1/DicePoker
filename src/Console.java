@@ -13,11 +13,12 @@ class Console {
     static void displayDrawn() {
         System.out.println("remis");
     }
+
     static void displayPlayerWin() {
         System.out.println("Pierwszy gracz wygral");
     }
 
     static void askForName(String player) {
-        System.out.print(player +  " gracz, podaj imie: ");
+        System.out.print(player + " gracz, podaj imie: ");
     }
 }
