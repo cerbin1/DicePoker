@@ -17,11 +17,11 @@ class Game {
 
         Console.displayScoreInfo();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
-        Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
+        Console.displayDicesResults(firstPlayer);
         checkFirstPlayersScore.checkScore();
 
         checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
-        Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
+        Console.displayDicesResults(secondPlayer);
         checkSecondPlayerScore.checkScore();
 
         checkWhoWins();

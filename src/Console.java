@@ -3,12 +3,13 @@ import java.util.concurrent.TimeUnit;
 class Console {
     static void displayDicesResults(Dices player) {
         System.out.println(player.getPlayersName() + " wylosowal: ");
+        int[] diceNumbers = player.getDices();
         for (int i = 0; i < 5; i++) {
             if (i == 4) {
-                System.out.print(player.getDices()[i]);
+                System.out.print(diceNumbers[i]);
             }
             else {
-                System.out.print(player.getDices()[i] + ", ");
+                System.out.print(diceNumbers[i] + ", ");
             }
         }
         System.out.println();
