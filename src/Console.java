@@ -37,7 +37,7 @@ class Console {
 
     static void displayScoreInfo() throws InterruptedException {
         System.out.println("Sprawdzam wynik...");
-        TimeUnit.SECONDS.sleep(0);
+        TimeUnit.SECONDS.sleep(3);
     }
 
     static void displayErrorInterruptedException() {
