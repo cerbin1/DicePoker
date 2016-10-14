@@ -44,9 +44,9 @@ class Game {
         if (checkFirstPlayersScore.getPowerOfScore() == checkSecondPlayerScore.getPowerOfScore()) {
             Console.displayDrawn();
         } else if (checkFirstPlayersScore.getPowerOfScore() > checkSecondPlayerScore.getPowerOfScore()) {
-            Console.displayPlayerWin();
+            Console.displayPlayerWin(firstPlayer.getPlayersName());
         } else {
-            Console.displayPlayerWin();
+            Console.displayPlayerWin(secondPlayer.getPlayersName());
         }
     }
 }

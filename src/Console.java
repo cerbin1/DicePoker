@@ -7,8 +7,7 @@ class Console {
         for (int i = 0; i < 5; i++) {
             if (i == 4) {
                 System.out.print(diceNumbers[i]);
-            }
-            else {
+            } else {
                 System.out.print(diceNumbers[i] + ", ");
             }
         }
@@ -16,11 +15,11 @@ class Console {
     }
 
     static void displayDrawn() {
-        System.out.println("remis");
+        System.out.println("Remis");
     }
 
-    static void displayPlayerWin() {
-        System.out.println("Pierwszy gracz wygral");
+    static void displayPlayerWin(String name) {
+        System.out.println(name + " wygral!!!");
     }
 
     static void askForName(String player) {
