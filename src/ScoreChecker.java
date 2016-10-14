@@ -4,7 +4,8 @@ class ScoreChecker {
 
     void groupDicesNumbers(Player player) {
         for (int i = 0; i < 5; i++) {
-            groupDiceNumbers[player.getDices()[i]]++;
+            int[] diceNumbers = player.getDices();
+            groupDiceNumbers[diceNumbers[i]]++;
         }
     }
 
