@@ -17,6 +17,7 @@ class Game {
         checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
         Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
         checkSecondPlayerScore.checkScore();
+
         checkWhoWins();
 
     }
