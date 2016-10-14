@@ -13,20 +13,10 @@ class ScoreChecker {
 
 
     void checkPoker() {
-        if (groupDiceNumbers[0] == 5) {
-            System.out.println("Poker z 0");
-        }
-        else if (groupDiceNumbers[1] == 5) {
-            System.out.println("Poker z 0");
-        }
-        else if (groupDiceNumbers[2] == 5) {
-            System.out.println("Poker z 0");
-        }
-        else if (groupDiceNumbers[3] == 5) {
-            System.out.println("Poker z 0");
-        }
-        else if (groupDiceNumbers[4] == 5) {
-            System.out.println("Poker z 0");
+        for (int i = 0; i < 5; i++) {
+            if (groupDiceNumbers[i] == 5) {
+                System.out.println("Poker z " + i);
+            }
         }
     }
 }
