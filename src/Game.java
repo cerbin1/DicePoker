@@ -20,13 +20,11 @@ class Game {
     }
 
     private void checkWhoWins() {
-        if (checkFirstPlayersScore.getPowerOfScore() == checkSecondPlayerScore.getPowerOfScore()){
+        if (checkFirstPlayersScore.getPowerOfScore() == checkSecondPlayerScore.getPowerOfScore()) {
             Console.displayDrawn();
-        }
-        else if(checkFirstPlayersScore.getPowerOfScore() > checkSecondPlayerScore.getPowerOfScore()) {
+        } else if (checkFirstPlayersScore.getPowerOfScore() > checkSecondPlayerScore.getPowerOfScore()) {
             Console.displayPlayerWin();
-        }
-        else {
+        } else {
             Console.displayPlayerWin();
         }
     }
