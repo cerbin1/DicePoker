@@ -9,8 +9,8 @@ class Player {
         playersDices[0] = 0;
         playersDices[1] = 0;
         playersDices[2] = 0;
-        playersDices[3] = 0;
-        playersDices[4] = 0;
+        playersDices[3] = 1;
+        playersDices[4] = 1;
     }
 
     int[] getDices() {

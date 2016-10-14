@@ -9,6 +9,6 @@ class Game {
         secondPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
-        checkFirstPlayersScore.checkPoker();
+        checkFirstPlayersScore.checkScore();
     }
 }
