@@ -13,7 +13,7 @@ class Player {
         playersDices[4] = 0;
     }
 
-    int getDices(int index) {
-        return playersDices[index];
+    int[] getDices() {
+        return playersDices;
     }
 }
