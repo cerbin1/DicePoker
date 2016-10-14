@@ -9,39 +9,34 @@ class Game {
     private ScoreChecker checkSecondPlayerScore = new ScoreChecker();
     private Scanner scanner = new Scanner(System.in);
 
-    private void startTheDraw(Dices player, String whichPlayer) {
-        Console.askForName(whichPlayer);
-        player.setPlayersName(scanner.nextLine());
-        Console.helloMessage(player);
-        try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch(InterruptedException e){
-            Console.displayErrorInterruptedException();
-        }
-        Console.displayDrawDicesIsDone();
-    }
-
     void run() throws InterruptedException {
 
         startTheDraw(firstPlayer, "Pierwszy");
         startTheDraw(secondPlayer, "Drugi");
 
 
-
-        System.out.println(firstPlayer.getPlayersName());
-        firstPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
         checkFirstPlayersScore.checkScore();
 
-        System.out.println(secondPlayer.getPlayersName());
-        secondPlayer.randomDices();
         checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
         Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
         checkSecondPlayerScore.checkScore();
 
         checkWhoWins();
+    }
 
+    private void startTheDraw(Dices player, String whichPlayer) {
+        Console.askForName(whichPlayer);
+        player.setPlayersName(scanner.nextLine());
+        Console.helloMessage(player);
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            Console.displayErrorInterruptedException();
+        }
+        player.randomDices();
+        Console.displayDrawDicesIsDone();
     }
 
     private void checkWhoWins() {
