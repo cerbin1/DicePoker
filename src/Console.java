@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit;
+
 class Console {
     static void displayDicesResults(Dices p, ScoreChecker s) {
         for (int i = 0; i < 5; i++) {
@@ -29,6 +31,11 @@ class Console {
 
     static void displayDrawDicesIsDone() {
         System.out.println("Kosci zostaly wylosowane!");
+    }
+
+    static void displayScoreInfo() throws InterruptedException {
+        System.out.println("Sprawdzam wynik...");
+        TimeUnit.SECONDS.sleep(2);
     }
 
     static void displayErrorInterruptedException() {

@@ -15,6 +15,7 @@ class Game {
         startTheDraw(secondPlayer, "Drugi");
 
 
+        Console.displayScoreInfo();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
         checkFirstPlayersScore.checkScore();
