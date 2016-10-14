@@ -1,13 +1,32 @@
 class ScoreChecker {
-    private int[] groupByDicesNumbers = {0, 0, 0, 0, 0};
+    private int[] groupDiceNumbers = {0, 0, 0, 0, 0};
 
     void groupDicesNumbers(Player player) {
         for (int i = 0; i < 5; i++) {
-            groupByDicesNumbers[player.getDices()[i]]++;
+            groupDiceNumbers[player.getDices()[i]]++;
         }
     }
 
     int[] getgroupByDicesNumbers() {
-        return groupByDicesNumbers;
+        return groupDiceNumbers;
+    }
+
+
+    void checkPoker() {
+        if (groupDiceNumbers[0] == 5) {
+            System.out.println("Poker z 0");
+        }
+        else if (groupDiceNumbers[1] == 5) {
+            System.out.println("Poker z 0");
+        }
+        else if (groupDiceNumbers[2] == 5) {
+            System.out.println("Poker z 0");
+        }
+        else if (groupDiceNumbers[3] == 5) {
+            System.out.println("Poker z 0");
+        }
+        else if (groupDiceNumbers[4] == 5) {
+            System.out.println("Poker z 0");
+        }
     }
 }

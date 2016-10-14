@@ -1,5 +1,5 @@
 class Console {
-    static void displayDicesResult(Player p, ScoreChecker s) {
+    static void displayDicesResults(Player p, ScoreChecker s) {
         for (int i = 0; i < 5; i++) {
             System.out.print(p.getDices()[i] + ", ");
         }
