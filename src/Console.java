@@ -21,4 +21,17 @@ class Console {
     static void askForName(String player) {
         System.out.print(player + " gracz, podaj imie: ");
     }
+
+    static void helloMessage(Dices player) {
+
+        System.out.println("Witaj " + player.getPlayersName() + ". Losuje dla Ciebie kosci...");
+    }
+
+    static void displayDrawDicesIsDone() {
+        System.out.println("Kosci zostaly wylosowane!");
+    }
+
+    static void displayErrorInterruptedException() {
+        System.err.println("Something went wrong!");
+    }
 }
