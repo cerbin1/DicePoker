@@ -7,7 +7,7 @@ class ScoreChecker {
         }
     }
 
-    int getgroupByDicesNumbers(int index) {
-        return groupByDicesNumbers[index];
+    int[] getgroupByDicesNumbers() {
+        return groupByDicesNumbers;
     }
 }
