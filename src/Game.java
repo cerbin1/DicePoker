@@ -6,11 +6,13 @@ class Game {
     private ScoreChecker checkSecondPlayerScore = new ScoreChecker();
 
     void run() {
+        Console.askForName("Pierwszy");
         firstPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
         checkFirstPlayersScore.checkScore();
 
+        Console.askForName("Drugi");
         secondPlayer.randomDices();
         checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
         Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);

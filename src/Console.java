@@ -16,4 +16,8 @@ class Console {
     static void displayPlayerWin() {
         System.out.println("Pierwszy gracz wygral");
     }
+
+    static void askForName(String player) {
+        System.out.print(player +  " gracz, podaj imie: ");
+    }
 }
