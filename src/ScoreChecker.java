@@ -49,7 +49,7 @@ class ScoreChecker {
                 System.out.println("Trojka z " + (i + 1));
                 return;
             } else if (groupDiceNumbers[i] == 2) {
-                System.out.println("Dwojka z " + i);
+                System.out.println("Dwojka z " + (i + 1));
                 return;
             }
         }
