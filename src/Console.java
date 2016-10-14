@@ -1,9 +1,15 @@
 import java.util.concurrent.TimeUnit;
 
 class Console {
-    static void displayDicesResults(Dices p, ScoreChecker s) {
+    static void displayDicesResults(Dices player, ScoreChecker s) {
+        System.out.println(player.getPlayersName() + " wylosowal: ");
         for (int i = 0; i < 5; i++) {
-            System.out.print(p.getDices()[i] + ", ");
+            if (i == 4) {
+                System.out.print(player.getDices()[i]);
+            }
+            else {
+                System.out.print(player.getDices()[i] + ", ");
+            }
         }
         System.out.println();
         for (int i = 0; i <= 5; i++) {
@@ -35,7 +41,7 @@ class Console {
 
     static void displayScoreInfo() throws InterruptedException {
         System.out.println("Sprawdzam wynik...");
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(0);
     }
 
     static void displayErrorInterruptedException() {

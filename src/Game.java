@@ -32,7 +32,7 @@ class Game {
         player.setPlayersName(scanner.nextLine());
         Console.helloMessage(player);
         try {
-            TimeUnit.SECONDS.sleep(2);
+            TimeUnit.SECONDS.sleep(0);
         } catch (InterruptedException e) {
             Console.displayErrorInterruptedException();
         }
