@@ -7,11 +7,13 @@ class Game {
 
     void run() {
         firstPlayer.randomDices();
-        secondPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
-        Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
         checkFirstPlayersScore.checkScore();
+
+        secondPlayer.randomDices();
+        checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
+        Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
         checkSecondPlayerScore.checkScore();
     }
 }
