@@ -1,12 +1,16 @@
+import java.util.Scanner;
+
 class Game {
 
     private Dices firstPlayer = new Dices();
     private Dices secondPlayer = new Dices();
     private ScoreChecker checkFirstPlayersScore = new ScoreChecker();
     private ScoreChecker checkSecondPlayerScore = new ScoreChecker();
+    private Scanner scanner = new Scanner(System.in);
 
     void run() {
         Console.askForName("Pierwszy");
+        firstPlayer.setPlayersName();
         firstPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
