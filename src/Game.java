@@ -10,13 +10,14 @@ class Game {
 
     void run() {
         Console.askForName("Pierwszy");
-        firstPlayer.setPlayersName();
+        firstPlayer.setPlayersName(scanner.nextLine());
         firstPlayer.randomDices();
         checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResults(firstPlayer, checkFirstPlayersScore);
         checkFirstPlayersScore.checkScore();
 
         Console.askForName("Drugi");
+        secondPlayer.setPlayersName(scanner.nextLine());
         secondPlayer.randomDices();
         checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
         Console.displayDicesResults(secondPlayer, checkSecondPlayerScore);
