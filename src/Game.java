@@ -7,8 +7,7 @@ class Game {
     void run() {
         firstPlayer.randomDices();
         secondPlayer.randomDices();
-        checkScore.checkPairs(firstPlayer);
+        checkScore.groupDicesNumbers(firstPlayer);
         Console.displayDicesResult(firstPlayer, checkScore);
-
     }
 }
