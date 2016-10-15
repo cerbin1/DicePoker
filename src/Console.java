@@ -35,9 +35,9 @@ class Console {
         System.out.println("Kosci zostaly wylosowane!");
     }
 
-    static void displayScoreInfo() throws InterruptedException {
+    static void displayScoreInfo() throws InterruptedException { // TODO checked exceptions nie są fajne
         System.out.println("Sprawdzam wynik...");
-        TimeUnit.SECONDS.sleep(3);
+        TimeUnit.SECONDS.sleep(3); // TODO to powinno być w TRY CATCHU i do innej metody
     }
 
     static void displayErrorInterruptedException() {

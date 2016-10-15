@@ -9,7 +9,7 @@ class Game {
     private ScoreChecker checkSecondPlayerScore = new ScoreChecker();
     private Scanner scanner = new Scanner(System.in);
 
-    void run() throws InterruptedException {
+    void run() throws InterruptedException { // TODO wywalić checked exception (throws Coś)
 
         startTheDraw(firstPlayer, "Pierwszy");
         startTheDraw(secondPlayer, "Drugi");
@@ -31,10 +31,10 @@ class Game {
         Console.askForName(whichPlayer);
         player.setPlayersName(scanner.nextLine());
         Console.helloMessage(player);
-        try {
+        try { // cały ten try powinien być w innej metodzie
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
-            Console.displayErrorInterruptedException();
+            Console.displayErrorInterruptedException(); // TODO wywalić to, nigdy nie będzie interrupta.
         }
         player.randomDices();
         Console.displayDrawDicesIsDone();

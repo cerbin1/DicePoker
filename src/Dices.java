@@ -5,7 +5,7 @@ class Dices {
 
     void randomDices() {
         for (int i = 0; i < 5; i++) {
-            playersDices[i] = (int) (Math.floor(Math.random() * 5) + 1);
+            playersDices[i] = (int) (Math.floor(Math.random() * 5) + 1); // TODO prawa strona równasię powinna isc do innej metody
         }
     }
 
@@ -13,11 +13,11 @@ class Dices {
         return playersDices;
     }
 
-    void setPlayersName(String playersName) {
+    void setPlayersName(String playersName) { // TODO ta metoda nie powinna być tu
         this.playersName = playersName;
     }
 
-    String getPlayersName() {
+    String getPlayersName() { // TODO to też nie
         return playersName;
     }
 }

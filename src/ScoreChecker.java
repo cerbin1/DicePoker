@@ -13,7 +13,7 @@ class ScoreChecker {
         return powerOfScore;
     }
 
-    private boolean checkIfFull() {
+    private boolean checkIfFull() { // TODO to do wyjebania, zrobić lepsza metode
         return ((groupDiceNumbers[0] == 3) && (groupDiceNumbers[1] == 2) || (groupDiceNumbers[0] == 3) && (groupDiceNumbers[2] == 2) || (groupDiceNumbers[0] == 3) && (groupDiceNumbers[3] == 2) ||
                 (groupDiceNumbers[0] == 3) && (groupDiceNumbers[4] == 2) || (groupDiceNumbers[0] == 3) && (groupDiceNumbers[5] == 2) || (groupDiceNumbers[1] == 3) && (groupDiceNumbers[0] == 2) ||
                 (groupDiceNumbers[1] == 3) && (groupDiceNumbers[2] == 2) || (groupDiceNumbers[1] == 3) && (groupDiceNumbers[3] == 2) || (groupDiceNumbers[1] == 3) && (groupDiceNumbers[4] == 2) ||
@@ -27,13 +27,13 @@ class ScoreChecker {
         );
     }
 
-    void checkScore() {
+    void checkScore() { // TODO to cała refactorowania
         for (int i = 0; i <= 5; i++) {
             if (groupDiceNumbers[i] == 5) {
                 System.out.println("Poker z " + i);
                 powerOfScore = 8;
                 return;
-            } else if (groupDiceNumbers[i] == 4) {
+            } else if (groupDiceNumbers[i] == 4) { // TODO jak robisz returna w poprzednim ifie, to nie musisz else (bo i tak wyjdzie)
                 System.out.println("Kareta z " + i);
                 powerOfScore = 7;
                 return;
