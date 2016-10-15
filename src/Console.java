@@ -11,7 +11,6 @@ class Console {
                 System.out.print(diceNumbers[i] + ", ");
             }
         }
-        nic nie działa
         System.out.println();
     }
 
