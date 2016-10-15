@@ -6,4 +6,3 @@ public class Application {
     }
 }
 //co jest widoczne w master
-//nalesniki
