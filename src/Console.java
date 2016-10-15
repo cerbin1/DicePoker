@@ -40,7 +40,7 @@ class Console {
         setTimeOut();
     }
 
-    private static void setTimeOut() {
+    static void setTimeOut() {
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
