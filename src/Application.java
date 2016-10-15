@@ -5,6 +5,4 @@ public class Application {
         game.run();
     }
 }
-
-// komentarz na dole
-//nalesniki
+//co jest widoczne w master
