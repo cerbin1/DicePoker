@@ -5,20 +5,6 @@ class GroupedDice {
         this.diceNumbers = diceNumbers;
     }
 
-    private boolean checkIfFull() { // TODO to do wyjebania, zrobić lepsza metode
-        return ((diceNumbers[0] == 3) && (diceNumbers[1] == 2) || (diceNumbers[0] == 3) && (diceNumbers[2] == 2) || (diceNumbers[0] == 3) && (diceNumbers[3] == 2) ||
-                (diceNumbers[0] == 3) && (diceNumbers[4] == 2) || (diceNumbers[0] == 3) && (diceNumbers[5] == 2) || (diceNumbers[1] == 3) && (diceNumbers[0] == 2) ||
-                (diceNumbers[1] == 3) && (diceNumbers[2] == 2) || (diceNumbers[1] == 3) && (diceNumbers[3] == 2) || (diceNumbers[1] == 3) && (diceNumbers[4] == 2) ||
-                (diceNumbers[1] == 3) && (diceNumbers[5] == 2) || (diceNumbers[2] == 3) && (diceNumbers[0] == 2) || (diceNumbers[2] == 3) && (diceNumbers[1] == 2) ||
-                (diceNumbers[2] == 3) && (diceNumbers[3] == 2) || (diceNumbers[2] == 3) && (diceNumbers[4] == 2) || (diceNumbers[2] == 3) && (diceNumbers[5] == 2) ||
-                (diceNumbers[3] == 3) && (diceNumbers[0] == 2) || (diceNumbers[3] == 3) && (diceNumbers[1] == 2) || (diceNumbers[3] == 3) && (diceNumbers[2] == 2) ||
-                (diceNumbers[3] == 3) && (diceNumbers[4] == 2) || (diceNumbers[3] == 3) && (diceNumbers[5] == 2) || (diceNumbers[4] == 3) && (diceNumbers[0] == 2) ||
-                (diceNumbers[4] == 3) && (diceNumbers[1] == 2) || (diceNumbers[4] == 3) && (diceNumbers[2] == 2) || (diceNumbers[4] == 3) && (diceNumbers[3] == 2) ||
-                (diceNumbers[4] == 3) && (diceNumbers[5] == 2) || (diceNumbers[5] == 3) && (diceNumbers[0] == 2) || (diceNumbers[5] == 3) && (diceNumbers[1] == 2) ||
-                (diceNumbers[5] == 3) && (diceNumbers[2] == 2) || (diceNumbers[5] == 3) && (diceNumbers[3] == 2) || (diceNumbers[5] == 3) && (diceNumbers[4] == 2)
-        );
-    }
-
     int checkScore() {
         for (int i = 0; i <= 5; i++) {
             if (diceNumbers[i] == 5) {
@@ -33,12 +19,12 @@ class GroupedDice {
                 System.out.println("Full");
                 return 6;
             }
-            if ((diceNumbers[0] == 1) && (diceNumbers[1] == 1) && (diceNumbers[2] == 1) && (diceNumbers[3] == 1) && (diceNumbers[4] == 1)) {
-                System.out.println("Maly street");
+            if (isBigStreet()) {
+                System.out.println("Duzy street");
                 return 5;
             }
-            if ((diceNumbers[1] == 1) && (diceNumbers[2] == 1) && (diceNumbers[3] == 1) && (diceNumbers[4] == 1) && (diceNumbers[5] == 1)) {
-                System.out.println("Duzy street");
+            if (isSmallStreet()) {
+                System.out.println("Maly street");
                 return 4;
             }
             if (diceNumbers[i] == 3) {
@@ -55,5 +41,27 @@ class GroupedDice {
             }
         }
         return 0;
+    }
+
+    private boolean checkIfFull() { // TODO to do wyjebania, zrobić lepsza metode
+        return ((diceNumbers[0] == 3) && (diceNumbers[1] == 2) || (diceNumbers[0] == 3) && (diceNumbers[2] == 2) || (diceNumbers[0] == 3) && (diceNumbers[3] == 2) ||
+                (diceNumbers[0] == 3) && (diceNumbers[4] == 2) || (diceNumbers[0] == 3) && (diceNumbers[5] == 2) || (diceNumbers[1] == 3) && (diceNumbers[0] == 2) ||
+                (diceNumbers[1] == 3) && (diceNumbers[2] == 2) || (diceNumbers[1] == 3) && (diceNumbers[3] == 2) || (diceNumbers[1] == 3) && (diceNumbers[4] == 2) ||
+                (diceNumbers[1] == 3) && (diceNumbers[5] == 2) || (diceNumbers[2] == 3) && (diceNumbers[0] == 2) || (diceNumbers[2] == 3) && (diceNumbers[1] == 2) ||
+                (diceNumbers[2] == 3) && (diceNumbers[3] == 2) || (diceNumbers[2] == 3) && (diceNumbers[4] == 2) || (diceNumbers[2] == 3) && (diceNumbers[5] == 2) ||
+                (diceNumbers[3] == 3) && (diceNumbers[0] == 2) || (diceNumbers[3] == 3) && (diceNumbers[1] == 2) || (diceNumbers[3] == 3) && (diceNumbers[2] == 2) ||
+                (diceNumbers[3] == 3) && (diceNumbers[4] == 2) || (diceNumbers[3] == 3) && (diceNumbers[5] == 2) || (diceNumbers[4] == 3) && (diceNumbers[0] == 2) ||
+                (diceNumbers[4] == 3) && (diceNumbers[1] == 2) || (diceNumbers[4] == 3) && (diceNumbers[2] == 2) || (diceNumbers[4] == 3) && (diceNumbers[3] == 2) ||
+                (diceNumbers[4] == 3) && (diceNumbers[5] == 2) || (diceNumbers[5] == 3) && (diceNumbers[0] == 2) || (diceNumbers[5] == 3) && (diceNumbers[1] == 2) ||
+                (diceNumbers[5] == 3) && (diceNumbers[2] == 2) || (diceNumbers[5] == 3) && (diceNumbers[3] == 2) || (diceNumbers[5] == 3) && (diceNumbers[4] == 2)
+        );
+    }
+
+    private boolean isBigStreet() {
+        return (diceNumbers[1] == 1) && (diceNumbers[2] == 1) && (diceNumbers[3] == 1) && (diceNumbers[4] == 1) && (diceNumbers[5] == 1);
+    }
+
+    private boolean isSmallStreet() {
+        return (diceNumbers[0] == 1) && (diceNumbers[1] == 1) && (diceNumbers[2] == 1) && (diceNumbers[3] == 1) && (diceNumbers[4] == 1);
     }
 }
