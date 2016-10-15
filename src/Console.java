@@ -2,7 +2,7 @@ import java.util.concurrent.TimeUnit;
 
 class Console {
     static void displayDicesResults(Dices player) {
-        System.out.println(player.getPlayersName() + " jebnal: ");
+        System.out.println(player.getPlayersName() + " jetbnal: ");
         int[] diceNumbers = player.getDices();
         for (int i = 0; i < 5; i++) {
             if (i == 4) {
