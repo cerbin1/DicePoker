@@ -47,8 +47,4 @@ class Console {
             System.err.println("Cos sie popsulo");
         }
     }
-
-    static void displayErrorInterruptedException() {
-        System.err.println("Something went wrong!");
-    }
 }
