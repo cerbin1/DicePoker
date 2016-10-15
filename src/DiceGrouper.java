@@ -6,7 +6,6 @@ class DiceGrouper {
             int[] diceNumbers = player.getDices();
             groupDiceNumbers[diceNumbers[i]]++;
         }
-        asdasd
         return new GroupedDice(groupDiceNumbers);
     }
 }
