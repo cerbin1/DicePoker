@@ -5,3 +5,4 @@ public class Application {
         game.run();
     }
 }
+// ~lubie w dupe
