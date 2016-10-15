@@ -4,7 +4,7 @@ class GroupedDice {
     GroupedDice(int[] diceNumbers) {
         this.diceNumbers = diceNumbers;
     }
-
+// jakies zmiany
     int checkScore() {
         for (int i = 0; i <= 5; i++) {
             if (diceNumbers[i] == 5) {
