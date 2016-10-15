@@ -6,6 +6,7 @@ class Dices {
     private int randomNumber() {
         return (int) (Math.floor(Math.random() * 5) + 1);
     }
+
     void randomDices() {
         for (int i = 0; i < 5; i++) {
             playersDices[i] = randomNumber();

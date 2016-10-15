@@ -4,9 +4,9 @@ class Game {
 
     private Dices firstPlayer = new Dices();
     private Dices secondPlayer = new Dices();
-    private ScoreChecker checkFirstPlayersScore = new ScoreChecker();
-    private ScoreChecker checkSecondPlayerScore = new ScoreChecker();
+    private ScoreChecker scoreChecker = new ScoreChecker();
     private Scanner scanner = new Scanner(System.in);
+
 
     void run() {
 
@@ -15,15 +15,26 @@ class Game {
 
 
         Console.displayScoreInfo();
-        checkFirstPlayersScore.groupDicesNumbers(firstPlayer); // TODO to powinno zwracac obiekt z pogrupowanymi kosciami
         Console.displayDicesResults(firstPlayer);
-        checkFirstPlayersScore.checkScore();
 
-        checkSecondPlayerScore.groupDicesNumbers(secondPlayer);
+        Console.displayScoreInfo();
         Console.displayDicesResults(secondPlayer);
-        checkSecondPlayerScore.checkScore();
 
-        checkWhoWins();
+        GroupedDice first = scoreChecker.groupDicesNumbers(firstPlayer);
+        first.checkScore();
+
+        GroupedDice second = scoreChecker.groupDicesNumbers(secondPlayer);
+        second.checkScore();
+
+        if (first.checkScore() == second.checkScore()) {
+            Console.displayDrawn();
+        } else {
+            if (first.checkScore() > second.checkScore()) {
+                Console.displayPlayerWin(firstPlayer.getPlayersName());
+            } else {
+                Console.displayPlayerWin(secondPlayer.getPlayersName());
+            }
+        }
     }
 
     private void startTheDraw(Dices player, String whichPlayer) {
@@ -33,15 +44,5 @@ class Game {
         Console.setTimeOut();
         player.randomDices();
         Console.displayDrawDicesIsDone();
-    }
-
-    private void checkWhoWins() {
-        if (checkFirstPlayersScore.getPowerOfScore() == checkSecondPlayerScore.getPowerOfScore()) {
-            Console.displayDrawn();
-        } else if (checkFirstPlayersScore.getPowerOfScore() > checkSecondPlayerScore.getPowerOfScore()) {
-            Console.displayPlayerWin(firstPlayer.getPlayersName());
-        } else {
-            Console.displayPlayerWin(secondPlayer.getPlayersName());
-        }
     }
 }
