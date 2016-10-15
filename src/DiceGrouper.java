@@ -1,4 +1,4 @@
-class ScoreChecker {
+class DiceGrouper {
 
     GroupedDice groupDicesNumbers(Dices player) {
         int[] groupDiceNumbers = {0, 0, 0, 0, 0, 0};

@@ -4,7 +4,7 @@ class Game {
 
     private Dices firstPlayer = new Dices();
     private Dices secondPlayer = new Dices();
-    private ScoreChecker scoreChecker = new ScoreChecker();
+    private DiceGrouper diceGrouper = new DiceGrouper();
     private Scanner scanner = new Scanner(System.in);
 
 
@@ -20,10 +20,10 @@ class Game {
         Console.displayScoreInfo();
         Console.displayDicesResults(secondPlayer);
 
-        GroupedDice first = scoreChecker.groupDicesNumbers(firstPlayer);
+        GroupedDice first = diceGrouper.groupDicesNumbers(firstPlayer);
         first.checkScore();
 
-        GroupedDice second = scoreChecker.groupDicesNumbers(secondPlayer);
+        GroupedDice second = diceGrouper.groupDicesNumbers(secondPlayer);
         second.checkScore();
 
         if (first.checkScore() == second.checkScore()) {
