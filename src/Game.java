@@ -16,7 +16,7 @@ class Game {
 
 
         Console.displayScoreInfo();
-        checkFirstPlayersScore.groupDicesNumbers(firstPlayer);
+        checkFirstPlayersScore.groupDicesNumbers(firstPlayer); // TODO to powinno zwracac obiekt z pogrupowanymi kosciami
         Console.displayDicesResults(firstPlayer);
         checkFirstPlayersScore.checkScore();
 

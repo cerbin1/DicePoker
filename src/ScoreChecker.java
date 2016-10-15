@@ -1,8 +1,8 @@
 class ScoreChecker {
     private int[] groupDiceNumbers = {0, 0, 0, 0, 0, 0};
-    private int powerOfScore = 0;
+    private int powerOfScore = 0; // TODO to pole do wyjebania
 
-    void groupDicesNumbers(Dices player) {
+    void groupDicesNumbers(Dices player) { // TODO to powinno zwracać obiekt z pogrupowanymi kosciami, a nie zapisywac do pola
         for (int i = 0; i < 5; i++) {
             int[] diceNumbers = player.getDices();
             groupDiceNumbers[diceNumbers[i]]++;
@@ -27,6 +27,8 @@ class ScoreChecker {
         );
     }
 
+    // TODO ta metoda powinna byc w obiekcie z pogrupowanymi kosciami
+    // TODO ta metoda powinna zwracac score, a nie zapisywac do pola
     void checkScore() { // TODO to cała refactorowania
         for (int i = 0; i <= 5; i++) {
             if (groupDiceNumbers[i] == 5) {
