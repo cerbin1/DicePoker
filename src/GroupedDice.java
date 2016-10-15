@@ -14,7 +14,7 @@ class GroupedDice {
             if (diceNumbers[i] == 4) {
                 System.out.println("Kareta z " + i);
                 return 7;
-            }
+            }//to jest widoczne w master
             if (checkIfFull()) {
                 System.out.println("Full");
                 return 6;
