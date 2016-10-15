@@ -38,7 +38,7 @@ class Console {
     static void displayScoreInfo() {
         System.out.println("Sprawdzam wynik...");
         setTimeOut();
-    }
+    }// pizda
 
     static void setTimeOut() {
         try {
